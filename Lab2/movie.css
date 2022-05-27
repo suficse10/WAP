@@ -1,0 +1,126 @@
+/* 
+name: Md Anwar Hossain
+section: February Entry 2022
+description: We make a movie review static web site using html and css.
+Some static contnet like images are sotre on images folder. 
+*/
+
+body {
+    background-image: url(images/background.png);
+    margin: 0%;
+    font-size: 8pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#banner>img {
+    width: 100%;
+    height: 50px;
+}
+
+.main-content {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 3px;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    min-height: 100vh;
+}
+
+.section-one {
+    width: 30%;
+    background-color: #afb149;
+    float: right;
+    border-radius: 12px;
+}
+
+.section-two {
+    width: 70%;
+}
+
+#overview>img {
+    width: 100%;
+    border-top-right-radius: 12px;
+}
+
+.section-divider {
+    width: 50%;
+    display: table-cell;
+}
+
+#logo {
+    border-top-left-radius: 12px;
+}
+
+.logo-section {
+    display: flex;
+}
+
+.logo-content {
+    color: red;
+    font-size: 44pt;
+    font-weight: bold;
+    background-image: url(images/rbg.png);
+    width: 100%;
+    text-shadow: 3px 3px #999999;
+}
+
+.card {
+    border: solid 2px gray;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #f4dfa1;
+}
+
+.user-paragraph {
+    margin-left: 5px;
+    display: inline-flex;
+    font-family: monospace;
+}
+
+footer {
+    background-color: #afb149;
+    margin-bottom: 0px;
+    height: 20px;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 72%;
+}
+
+footer p {
+    margin: 0px;
+}
+
+dt {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+dd {
+    font-size: 14px;
+    font-family: emoji;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+.validator {
+    text-align: right;
+}
