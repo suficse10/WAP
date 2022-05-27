@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Style the header */
+        header {
+          background-color: cyan;
+          padding: 5px;
+          text-align: center;
+          font-size: 35px;
+        }
+        
+        /* Container for flexboxes */
+        section.menu {
+          /* display: -webkit-flex; */
+          display: flex;
+          flex-direction: row;
+          height: 30px;
+        }
+
+        section.middle {
+          /* display: -webkit-flex; */
+          display: flex;
+          height: 300px;
+        }
+        
+        /* Style the navigation menu */
+        nav {
+          /* -webkit-flex: 1;
+          -ms-flex: 1; */
+          flex: 1;
+          flex-direction: row;
+          background: darkcyan;
+          font-size: 20px;
+          justify-items: center;
+          border: #777 solid 2px;
+        }
+
+        nav > a{
+            margin: 5px;
+            /* border-style: solid;
+            border-color: black; */
+            padding: 3px;
+        }
+        
+        /* Style the list inside the menu */
+        /* nav ul {
+          list-style-type: none;
+          padding: 0;
+        } */
+        
+        /* Style the content */
+        article#art1 {
+          /* -webkit-flex: 3;
+          -ms-flex: 3; */
+          flex: 3;
+          background-color: gray;
+          padding: 10px;
+        }
+
+        article#art2 {
+          /* -webkit-flex: 3;
+          -ms-flex: 3; */
+          flex: 3;
+          background-color: darkgray;
+          padding: 10px;
+        }
+
+        article#art3 {
+          -webkit-flex: 3;
+          -ms-flex: 3;
+          flex: 3;
+          background-color: lightgrey;
+          padding: 10px;
+        }
+        
+        /* Style the footer */
+        footer {
+          background-color: #777;
+          padding: 10px;
+          text-align: center;
+          color: white;
+        }
+        
+        /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          section.menu {
+            /* -webkit-flex-direction: column; */
+            flex-direction: row;
+          }
+
+          section.middle {
+            /* -webkit-flex-direction: column; */
+            flex-direction: column;
+          }
+        }
+        </style>
+</head>
+<body>
+    
+    <header>
+        <h3>Header</h3>
+      </header>
+      
+      <section class="menu">
+        <nav>
+            <a href="#">Menu1</a>
+            <a href="#">Menu2</a>
+            <a href="#">Menu3</a>
+        </nav>
+      </section>  
+
+      <section class="middle">
+        <article id="art1">
+            Column1  
+          </article>
+        
+        <article id="art2">
+          Column2
+        </article>
+
+        <article id="art3">
+          Column3  
+        </article>
+      </section>
+      
+      <footer>
+        <p>Footer</p>
+      </footer>
+    
+</body>
+</html>

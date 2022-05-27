@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        section{
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(41, 39, 39);
+        }
+
+        #div1{
+            width: 300px;
+            margin: 10px;
+            color: rgb(182, 182, 182);
+        }
+
+        #div2{
+            width: 300px;
+            margin: 10px;
+            color: rgb(182, 182, 182);
+        }
+
+        #div3{
+            margin: 10px;
+            color: rgb(182, 182, 182);
+        }
+
+        div > h3{
+            color: azure;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        footer {
+          background-color: #777;
+          padding: 10px;
+          text-align: center;
+          color: white;
+        }
+
+        @media (max-width: 600px) {
+          section {
+            /* -webkit-flex-direction: column; */
+            flex-direction: row;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div id="div1">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div id="div2">
+            <h3>Latest Tweet</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+            </ul>
+
+        </div>
+            
+        <div id="div3">
+            <h3>Instagram</h3>
+            <a><img src="1.jpg" width="100" height="100"></a>
+            <a><img src="2.jpg" width="100" height="100"></a>
+            <a><img src="3.jpg" width="100" height="100"></a>
+            <a><img src="4.jpg" width="100" height="100"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+    
+</body>
+</html>
