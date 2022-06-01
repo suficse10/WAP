@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        sdsfsf {
+            color: pink;
+        }
+
+        div#id{
+            margin-top: 30px;
+            margin-left: 70px;
+        }
+    </style>
+    <script>
+        //create element - div,p,img, a, table, 
+        //update element - attributes as well innerHTML
+        //remove element
+        //replace 
+        // $(function(){
+        // let p = document.createElement("p");
+        // p.setAttribute("id","")
+        // p.innerHTML="Hello";
+
+        // document.getElementById("id").replaceWith(p);
+        // })
+        function clicked() {
+            let valuep = $("#inputID").val();
+            let label = document.createElement("label");//<label></label>
+            label.innerHTML = valuep;//<label>innn</label>
+            document.getElementById("inputID").replaceWith(label);
+
+            let txt = $("#txt").val();
+            let textarea = document.createElement("label");
+            textarea.innerHTML = txt;
+            document.getElementById("txt").replaceWith(txt);
+
+            let radp = $("input[name='genderRad']:checked").val();
+            let genderLabel = document.createElement("label");
+            genderLabel.innerHTML = radp;
+            document.getElementById("radioDiv").replaceWith(genderLabel);
+
+            let selectDept = $("#slDept option:selected").val();
+            let deptlabel = document.createElement("label");
+            deptlabel.innerHTML = selectDept;
+            document.getElementById("deptDiv").replaceWith(deptlabel);
+
+            let val = [];
+            $("input[name='checkCourse']:checked").each(function(i){
+                val[i] = $(this).val();
+            })
+            //let checkCrs = $("input[name='checkCourse']:checked").val();
+            let courseLabel = document.createElement("label");
+            courseLabel.innerHTML = val;
+            document.getElementById("courseDiv").replaceWith(courseLabel);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="id">
+        <!-- <sdsfsf>sdfsfsfsdf</sdsfsf> <br> -->
+        <h3>Personal Form</h3>
+        Name: <input type="text" id="inputID" /> <br>
+        <label>About:</label><br>
+        <textarea name="" id="txt" cols="30" rows="5"></textarea> <br>
+        Gender:
+        <div id="radioDiv">
+            <input type="radio" name="genderRad" value="Male">Male
+            <input type="radio" name="genderRad" value="Female">Female
+        </div><br>
+        Department:
+        <div id="deptDiv">
+            <select name="" id="slDept">
+                <option value="">Select</option>
+                <option value="Compro">Compro</option>
+                <option value="MBA">MBA</option>
+            </select> <br><br>
+        </div><br>
+        Courses:
+        <div id="courseDiv">
+            <input type="checkbox" name="checkCourse" value="WAP">WAP
+            <input type="checkbox" name="checkCourse" value="MWA">MWA
+            <input type="checkbox" name="checkCourse" value="WAA">WAA
+            <input type="checkbox" name="checkCourse" value="MGT">MGT
+            <input type="checkbox" name="checkCourse" value="ACC">ACC
+        </div><br>
+
+        
+        
+        <input type="button" onclick="clicked()" value="Submit" />
+    </div>
+</body>
+
+</html>
