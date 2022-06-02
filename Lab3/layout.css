@@ -1,0 +1,125 @@
+body{
+    background-color: #282828;  
+    font-family: Georgia, 'Times New Roman', Times, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+  }
+  .container{
+      max-width: 1110px;
+      margin: 0 auto;
+  }
+  
+  footer{
+      background-color: #282828;
+      color: #555;  
+  }
+  footer h2, footer a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .flex-container {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      font-size: 12px;;
+  }
+  .flex-container h2{
+      font-size: 16px;
+      color: #fff;
+  }
+  
+  .flex-start { 
+  justify-content: flex-start; 
+  }
+  
+  .flex-end { 
+      justify-content: flex-end; 
+  }
+  .icon-custom{
+      color: white;
+      padding-right: 20px;
+  }
+  .center { 
+      justify-content: center; 
+  }
+  .space-between { 
+      justify-content: space-between; 
+  }
+  .space-around { 
+      justify-content: space-around; 
+  }
+  
+  .space-evenly { 
+      justify-content: space-evenly; 
+  }
+  .tweets > li{
+      font-style: italic;
+  }
+  .flex-item {     
+      flex: 1 1 0px;   
+      padding: 5px;        
+      margin: 5px;
+      color: rgb(131, 128, 128);
+      font-size: 14px;
+      line-height: 20px;
+  }
+  .flex-item ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  .flex-item img{
+      max-width: 170px;
+  }
+  
+  ul.quick-contact li{
+      margin: 15px 0px;
+  }
+  .flex-item input{
+      background-color: #2a2b30;
+      border:1px solid #282828;
+      border-radius: 25px;
+      padding: 8px 20px;
+      float: left;
+  }
+  button{
+      background-color: #ee8434;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      border: 1px solid #ee8434;
+      border-radius: 20px;
+      padding: 6px 20px;
+      float: left;
+      position: relative;
+      right: 34px;
+  }
+  ul.links{
+      margin: 0px;
+      padding: 20px 0px 20px 0px;
+      margin-left: -25px;
+  }
+  ul.links li{
+      float: left;
+  }
+  ul.links > li >a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0px 15px;
+  }
+  ul.quick-contact li img{
+      position: relative;
+      top: 5px;
+  }
+  .comp{
+      text-align: right;
+      padding-right: 10px;
+      padding-top: 20px;
+  }
+  .navsection{
+      margin-top: 60px;
+      border-top: 1px solid #555;
+  }
