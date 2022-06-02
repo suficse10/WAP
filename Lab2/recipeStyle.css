@@ -10,6 +10,12 @@ body{
     border-color: chocolate;
 }
 
+div#userDiv > p{
+    background-color: rgba(219, 219, 85, 0.61);
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 footer{
     margin-top: 50px;
 }
