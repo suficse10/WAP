@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+$(function () {
+    let objArray = [{ name: "Steve", age: 70 }, { name: "John", age: 30 }, { name: "Bob", age: 40 }];
+    let myTable = createTable(objArray);
+    //document.body.append(myTable);
+
+    // $('#sort_by_age').click(function(){
+    //     objArray.sort((x,y)=> x.age-y.age);
+    //     createTable(objArray);})
+
+    $('#sort_by_age').click(btn=>{
+        objArray.sort((x,y)=> x.age-y.age);
+        createTable(objArray);});
+
+    $('#sort_by_name').click(function(){
+        objArray.sort((x,y)=> x.name>y.name?1:-1);
+        createTable(objArray);});
+})
+
+function createTable(objArray) {
+    let tableElement = document.createElement("table");
+    let rows = "";
+    let headers = "<tr>";
+    //Create headers
+    for (let key in objArray[0]) {
+        headers += "<th>" + key + "</th>";
+    }
+    headers += "</tr>";
+    console.log(headers)
+    for (let element of objArray) {
+        rows += "<tr>";
+        for (let key in element) {
+            rows += "<td>" + element[key] + "</td>";
+        }
+        rows += "</tr>"
+    }
+    console.log(rows)
+    tableElement.innerHTML = headers + rows;
+    $("#table").html(tableElement);
+    //return tableElement;
+}
+</script>
+<body style="margin: 50px;">
+    <input type="button" id="sort_by_age" value="SORT AGE">
+    <input type="button" id="sort_by_name" value="SORT NAME">
+    <div id="table"></div>
+</body>
+</html>
